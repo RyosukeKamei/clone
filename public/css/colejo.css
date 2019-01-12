@@ -1,0 +1,118 @@
+@CHARSET "UTF-8";
+
+/*
+ * app.cssをオーバーライド
+ */
+
+body {
+	font-size: 1.2rem;
+	background-color: #f9f9f9;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 10px 0px;
+}
+
+/*
+ *  Youtube レスポンシブル
+ */
+.youtube {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.youtube iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+/*
+ * end of Youtube レスポンシブル
+ */
+
+/*
+ * CSS トグル
+ */
+
+/* 全体 */
+.answer_box {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.answer_box label {
+    padding: 15px;
+    border: solid 1px black;
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.answer_box label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.answer_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.answer_box .answer {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.answer_box input:checked ~ .answer {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+/*
+ * end of CSS トグル
+ */
+ 
+.container {
+    overflow: auto;
+    margin-top: 50px;
+}
+ 
+.header {
+	height: 50px; /* 高さ */
+	width: 100%;
+    border-width: 1px;
+    border-color: #e6e6e6;
+    border-bottom-style: solid;
+    background-color: #ffffff;
+    padding: 15px; 
+    position: fixed;
+    top: 0; /* 固定する位置 */
+    left: 0; /* 固定する位置 */
+    right: 0;  /* 固定する位置 */  
+    margin-bottom: 50px;
+    z-index: 100; 
+}
+
+.header_left {
+	text-align: left;
+}
+
+.header_right {
+	text-align: right;
+}
