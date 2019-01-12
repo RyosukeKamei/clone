@@ -39,7 +39,7 @@ class QuestionController extends Controller
         // 午後問題一覧
         $pm_question_lists = \App\AfterQuestion::where('examination_id', $examination_id)->where('round_id', $round_id)->orderby('number', 'asc')->get();
         
-        // 試験ごと
+        // 試験ごと   
         $rounds = \App\Round::all();
         
         return view('question.am_question', compact('questions', 'choices', 'am_question_lists', 'am_question_last_number', 'pm_question_lists', 'rounds'));
